@@ -7,9 +7,10 @@ exports.postPosts = function(req, res){
 	// Set prperties for POST data
 	post.title = req.body.title;
 	post.content = req.body.content;
-	post.userId = req.user._id
+	post.userId = req.user._id;
 	simpleTitle = req.body.title;
 	post.simpleTitle = post.title.replace(/\s+/g, '_').toLowerCase();
+	post.postDate = new Date();
 
 	// Save the post and check for errors
 	post.save(function(err){

@@ -6,7 +6,8 @@ var PostSchema = new mongoose.Schema({
 	title: String,
 	content: String,
 	userId: String,
-	simpleTitle: String
+	simpleTitle: String,
+	postDate: Date
 });
 
 // Export the mongoose model

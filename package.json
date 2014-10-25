@@ -1,0 +1,13 @@
+{
+  "name": "blog",
+  "main": "server.js",
+  "dependencies": {
+    "bcrypt-nodejs": "^0.0.3",
+    "body-parser": "*",
+    "express": "^4.0",
+    "mongoose": "*",
+    "passport": "^0.2.1",
+    "passport-http": "^0.2.2",
+    "express-handlebars": "*"
+  }
+}

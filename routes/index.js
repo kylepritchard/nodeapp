@@ -46,5 +46,10 @@ router.route('/api/users/')
 	.post(userController.postUsers);
 
 
+router.post('/upload', function(req, res, next) {
+
+    res.send(req.body.name);
+});
+
 // Export the routes
 module.exports = router;

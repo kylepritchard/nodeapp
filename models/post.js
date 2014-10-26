@@ -7,7 +7,8 @@ var PostSchema = new mongoose.Schema({
 	content: String,
 	userId: String,
 	simpleTitle: String,
-	postDate: Date
+	postDate: Date,
+	postUrl: String
 });
 
 // Export the mongoose model

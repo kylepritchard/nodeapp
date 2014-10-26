@@ -11,12 +11,13 @@ exports.postPosts = function(req, res){
 	simpleTitle = req.body.title;
 	post.simpleTitle = post.title.replace(/\s+/g, '_').toLowerCase();
 	post.postDate = new Date();
+	post.postUrl = "/posts/" + post.simpleTitle;
 
 	// Save the post and check for errors
 	post.save(function(err){
 		if (err)
 			res.send(err);
-		res.json({ message: 'Post added', data: post });
+		res.redirect('/posts');
 	});
 };
 
@@ -35,8 +36,7 @@ exports.getPost = function(req, res){
 	Post.findOne({simpleTitle: req.params.post_title}, function(err, post){
 		if (err)
 			res.send(err);
-
-		res.render('index', {posts: post});
+		res.render('index', {post: post});
 	});
 };
 
@@ -66,6 +66,6 @@ exports.deletePost = function(req, res) {
 		if (err)
 			res.send(err);
 
-		res.json({ message: 'Post removed' });
+		res.end();
 	});
 };

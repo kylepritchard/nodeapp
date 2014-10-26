@@ -319,7 +319,7 @@
 			"file": "server.js",
 			"settings":
 			{
-				"buffer_size": 935,
+				"buffer_size": 1111,
 				"line_ending": "Unix"
 			}
 		},
@@ -332,18 +332,10 @@
 			}
 		},
 		{
-			"file": "models/post.js",
-			"settings":
-			{
-				"buffer_size": 301,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "views/index.handlebars",
 			"settings":
 			{
-				"buffer_size": 130,
+				"buffer_size": 273,
 				"line_ending": "Unix"
 			}
 		},
@@ -352,6 +344,14 @@
 			"settings":
 			{
 				"buffer_size": 1622,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "routes/index.js",
+			"settings":
+			{
+				"buffer_size": 1430,
 				"line_ending": "Unix"
 			}
 		}
@@ -449,15 +449,18 @@
 	"expanded_folders":
 	[
 		"/Users/kylepritchard/Desktop/nodeapp/blog",
-		"/Users/kylepritchard/Desktop/nodeapp/blog/controllers"
+		"/Users/kylepritchard/Desktop/nodeapp/blog/controllers",
+		"/Users/kylepritchard/Desktop/nodeapp/blog/routes",
+		"/Users/kylepritchard/Desktop/nodeapp/blog/uploads"
 	],
 	"file_history":
 	[
+		"/Users/kylepritchard/Desktop/nodeapp/blog/package.json",
+		"/Users/kylepritchard/Desktop/nodeapp/blog/models/post.js",
 		"/Users/kylepritchard/Desktop/nodeapp/blog/sftp-config.json",
 		"/Users/kylepritchard/Library/Application Support/Sublime Text 3/Packages/User/SFTP.errors.log",
 		"/Users/kylepritchard/Library/Application Support/Sublime Text 3/Packages/SFTP/SFTP.sublime-settings",
 		"/Users/kylepritchard/Linode",
-		"/Users/kylepritchard/Desktop/nodeapp/blog/package.json",
 		"/Users/kylepritchard/Desktop/nodeapp/blog/routes/index.js",
 		"/Users/kylepritchard/Desktop/nodeapp/blog/controllers/posts.js",
 		"/Users/kylepritchard/Desktop/nodeapp/blog/views/index.handlebars",
@@ -467,7 +470,6 @@
 		"/Users/kylepritchard/Desktop/nodeapp/blog/server.js",
 		"/Users/kylepritchard/Desktop/nodeapp/blog/routes/posts.js",
 		"/Users/kylepritchard/Desktop/nodeapp/blog/views/layouts/main.handlebars",
-		"/Users/kylepritchard/Desktop/nodeapp/blog/models/post.js",
 		"/Users/kylepritchard/Desktop/nodeapp/blog/models/user.js",
 		"/Users/kylepritchard/Desktop/nodeapp/blog/controllers/users.js",
 		"/Users/kylepritchard/Desktop/nodeapp/blog/controllers/auth.js",
@@ -710,15 +712,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 935,
+						"buffer_size": 1111,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								935,
-								935
+								648,
+								648
 							]
 						],
 						"settings":
@@ -729,10 +731,10 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 327.0,
+						"translation.y": 278.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -755,61 +757,32 @@
 						"settings":
 						{
 							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "models/post.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 301,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								214,
-								214
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "views/index.handlebars",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 130,
+						"buffer_size": 273,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								115,
-								115
+								240,
+								240
 							]
 						],
 						"settings":
@@ -823,11 +796,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "controllers/posts.js",
 					"semi_transient": false,
 					"settings":
@@ -852,10 +825,41 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 762.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "routes/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1430,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1379,
+								1379
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 507.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]

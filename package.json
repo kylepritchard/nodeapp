@@ -8,6 +8,7 @@
     "mongoose": "*",
     "passport": "^0.2.1",
     "passport-http": "^0.2.2",
-    "express-handlebars": "*"
+    "express-handlebars": "*",
+    "multer": "*"
   }
 }

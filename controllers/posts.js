@@ -60,7 +60,6 @@ exports.putPost = function(req, res) {
 };
 
 exports.deletePost = function(req, res) {
-	
 	// Use the Beer model to find a specific beer and remove it
 	Post.findOneAndRemove({simpleTitle: req.params.post_title}, function(err) {
 		if (err)

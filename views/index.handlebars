@@ -2,42 +2,42 @@
 
 <p>This is a paragraph</p>
 {{#if posts}}
-  {{#each posts}}
-    <p>{{title}}</p>
-    <p>{{content}}</p>
-    <p>{{postDate}}</p>
-    <a href="{{{postUrl}}}">Link</a>
-    <a href="#" id="deletePost" value="{{simpleTitle}}">Delete</a>
-  {{/each}}
+    {{#each posts}}
+        <p>{{title}}</p>
+        <p>{{content}}</p>
+        <p>{{postDate}}</p>
+        <a href="{{{postUrl}}}">Link</a>
+        <a href="#" id="deletePost" value="{{simpleTitle}}">Delete</a>
+    {{/each}}
 {{else}}
-  {{#if post}}
-    <p>{{post.title}}</p>
-    <p>{{post.content}}</p>
-    <p>{{post.postDate}}</p>
-    <a href="{{{post.postUrl}}}">Link</a>
-    <a href="#" id="deletePost" value="{{post.simpleTitle}}">Delete</a>
-  {{/if}}
+    {{#if post}}
+        <p>{{post.title}}</p>
+        <p>{{post.content}}</p>
+        <p>{{post.postDate}}</p>
+        <a href="{{{post.postUrl}}}">Link</a>
+        <a href="#" id="deletePost" value="{{post.simpleTitle}}">Delete</a>
+    {{/if}}
 {{/if}}
 
 <form id="form" enctype="multipart/form-data" action="/api/posts" method="post">
-  <input type="text" name="title">
-  <input type="text" name="content">
-  <input type="file" name="upload">
-  <input type="submit">
+    <input type="text" name="title">
+    <input type="text" name="content">
+    <input type="file" name="upload">
+    <input type="submit">
 </form>
 
 <script>
-  $(document).ready(function() {
-  	$('a#deletePost').on('click', function(e) {
-  		e.preventDefault();
-  		post = $(this).attr('value');
-  		$.ajax({
-  			url: "/api/posts/" + post,
-  			type: "DELETE"
-  		}).done(function() {
-  			console.log('deleted');
-  			location.href = '/posts';
-  		});
-  	});
-  });
+    $(document).ready(function() {
+        $('a#deletePost').on('click', function(e) {
+            e.preventDefault();
+            post = $(this).attr('value');
+            $.ajax({
+                url: "/api/posts/" + post,
+                type: "DELETE"
+            }).done(function() {
+                console.log('deleted');
+                location.href = '/posts';
+            });
+        });
+    });
 </script>

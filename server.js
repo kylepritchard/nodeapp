@@ -1,10 +1,10 @@
 // Get required packages
-var express = require('express');
-var mongoose = require('mongoose');
-var bodyParser = require('body-parser');
-var multer = require('multer');
-var passport = require('passport');
-var exphbs = require('express-handlebars');
+var express = require('express'),
+    mongoose = require('mongoose'),
+    bodyParser = require('body-parser'),
+    multer = require('multer'),
+    passport = require('passport'),
+    exphbs = require('express-handlebars');
 
 //Load Routing
 var routes = require('./routes/index');
@@ -17,17 +17,23 @@ var app = express();
 
 // Use packages in app
 app.use(bodyParser.urlencoded({
-  extended: true
+    extended: true
 }));
 
+//Use multer for multipart forms
 app.use(multer({
-  dest: './uploads/',
-  rename: function(fieldname, filename) {
-    return filename.replace(/\W+/g, '-').toLowerCase();
-  }
+    dest: './uploads/',
+    rename: function(fieldname, filename) {
+        return filename.replace(/\W+/g, '-').toLowerCase();
+    }
 }));
 
+//Use passport for authentication
 app.use(passport.initialize());
+
+// Setup cors for cross domain posting
+var cors = require('./controllers/cors');
+app.use(cors);
 
 // Set directory for views
 app.set('views', __dirname + '/views');
@@ -37,7 +43,7 @@ app.use(express.static(__dirname + '/public'));
 
 // Set view engine to handlebars
 app.engine('handlebars', exphbs({
-  defaultLayout: 'main'
+    defaultLayout: 'main'
 }));
 app.set('view engine', 'handlebars');
 
@@ -48,7 +54,7 @@ var port = process.env.PORT || 3000;
 app.use('/', routes);
 
 app.get('/', function(req, res) {
-  res.send('hello world');
+    res.send('hello world');
 });
 
 // STart server

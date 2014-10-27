@@ -1,4 +1,5 @@
 var express = require('express');
+var fs = require('fs');
 var router = express.Router();
 
 // Load Controllers
@@ -46,34 +47,39 @@ router.route('/api/users/')
     .post(userController.postUsers);
 
 router.post('/upload', function(req, res, next) {
-    console.log(req.files);
 
-    var fs = require('fs');
-
+    // Set file location for retrieving images
     var filelocation = "http://localhost:3000/uploads/";
 
+    // Get the file information from upload
     var imageupload = req.files;
+
+    // Create the string for saving the image info to imagelist.json
     var imagejson =
         ",{\"title\":\"" + imageupload.file.name +
         "\",\"image\":\"" + filelocation + imageupload.file.name +
         "\",\"thumb\":\"" + filelocation + imageupload.file.name +
         "\"}]";
 
+    // Set the location of the image list
     var outputFilename = 'public/uploads/imagelist.json';
 
+    // Open the imagelist.json file
     fs.readFile(outputFilename, 'utf8', function(err, data) {
-        if (err) console.log(err);
+        if (err)
+            console.log(err);
+        // Parse the imagelist file and stringify for editing
         data = JSON.parse(data);
         var str = JSON.stringify(data);
-        var newstring = str.replace("]", imagejson);
-        console.log(newstring);
 
+        // Add new image information to parsed string
+        var newstring = str.replace("]", imagejson);
+
+        // Write the new information to the imagelist.json file
         fs.writeFile(outputFilename, newstring, function(err) {
-            if (err) {
+            if (err)
                 console.log(err);
-            } else {
-                console.log("JSON saved to " + outputFilename);
-            }
+            console.log("JSON saved to " + outputFilename);
         });
     });
 });

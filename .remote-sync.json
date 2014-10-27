@@ -1,13 +1,14 @@
 {
-  "transport": "scp",
-  "hostname": "178.79.146.150",
-  "port": 22,
-  "username": "root",
-  "password": "laser162608",
-  "target": "/home/blog",
-  "ignore": [
-    ".git/**",
-    "node_modules",
-    "data"
-  ]
+    "transport": "scp",
+    "hostname": "178.79.146.150",
+    "port": 22,
+    "username": "root",
+    "password": "laser162608",
+    "target": "/home/blog",
+    "ignore": [
+        ".git/**",
+        "node_modules",
+        "data",
+        "uploads/*.jpg"
+    ]
 }

@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({
 
 //Use multer for multipart forms
 app.use(multer({
-    dest: './uploads/',
+    dest: './public/uploads/',
     rename: function(fieldname, filename) {
         return filename.replace(/\W+/g, '-').toLowerCase();
     }

@@ -53,9 +53,5 @@ var port = process.env.PORT || 3000;
 // Register all our routes with /
 app.use('/', routes);
 
-app.get('/', function(req, res) {
-    res.send('hello world');
-});
-
-// STart server
+// Start server
 app.listen(port);

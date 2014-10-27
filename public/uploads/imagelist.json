@@ -1,1 +1,5 @@
-[]
+[{
+    "title": "new-dsc-logo.jpg",
+    "image": "http://localhost:3000/uploads/new-dsc-logo.jpg",
+    "thumb": "http://localhost:3000/uploads/new-dsc-logo.jpg"
+}]

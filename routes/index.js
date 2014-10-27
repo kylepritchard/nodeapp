@@ -1,6 +1,9 @@
 var express = require('express');
 var fs = require('fs');
 var router = express.Router();
+var rd = require('recurring-date');
+var us = require('underscore');
+var moment = require('moment');
 
 // Load Controllers
 var postController = require('../controllers/posts');
@@ -13,6 +16,21 @@ var authController = require('../controllers/auth');
 
 router.get('/', function(req, res) {
     res.render('index');
+    var date = moment().format('MM/DD/YYYY');;
+    var pattern = {
+        "date": date,
+        "every": "2",
+        "unit": "d",
+        "end_condition": "for",
+        "until": "12/1/2014",
+        "rfor": "10",
+        "nth": "1",
+        "occurence_of": "0",
+        "days": null
+    };
+    var r = new rd(pattern);
+    var dates = r.generate();
+    console.log(dates);
 });
 
 // ****************************************
@@ -82,6 +100,9 @@ router.post('/upload', function(req, res, next) {
             console.log("JSON saved to " + outputFilename);
         });
     });
+
+    res.send('File Saved');
+    next();
 });
 // Export the routes
 module.exports = router;

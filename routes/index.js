@@ -16,21 +16,30 @@ var authController = require('../controllers/auth');
 
 router.get('/', function(req, res) {
     res.render('index');
-    var date = moment().format('MM/DD/YYYY');;
-    var pattern = {
-        "date": date,
-        "every": "2",
-        "unit": "d",
-        "end_condition": "for",
-        "until": "12/1/2014",
-        "rfor": "10",
-        "nth": "1",
-        "occurence_of": "0",
-        "days": null
-    };
-    var r = new rd(pattern);
-    var dates = r.generate();
-    console.log(dates);
+
+    // Date parsing
+    // var date = moment().format('MM/DD/YYYY');;
+    // var pattern = {
+    //     "date": date,
+    //     "every": "2",
+    //     "unit": "d",
+    //     "end_condition": "for",
+    //     "until": "12/1/2014",
+    //     "rfor": "10",
+    //     "nth": "1",
+    //     "occurence_of": "0",
+    //     "days": null
+    // };
+    // var r = new rd(pattern);
+    // var dates = r.generate();
+    // var userDates = [];
+    // dates.forEach(function(date) {
+    //     var gooddate = moment(date._d).format('DD/MM/YY');
+    //     // console.log(gooddate);
+    //     userDates.push(gooddate);
+    // });
+    //
+    // res.json(userDates);
 });
 
 // ****************************************

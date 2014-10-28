@@ -2,7 +2,6 @@
 var express = require('express'),
     mongoose = require('mongoose'),
     bodyParser = require('body-parser'),
-    multer = require('multer'),
     passport = require('passport'),
     exphbs = require('express-handlebars');
 
@@ -20,13 +19,9 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-//Use multer for multipart forms
-app.use(multer({
-    dest: './public/uploads/',
-    rename: function(fieldname, filename) {
-        return filename.replace(/\W+/g, '-').toLowerCase();
-    }
-}));
+// Manage uploads & image resizing
+var uploads = require('./controllers/upload');
+app.use(uploads);
 
 //Use passport for authentication
 app.use(passport.initialize());

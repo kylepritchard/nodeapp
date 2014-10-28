@@ -12,6 +12,7 @@
         "multer": "*",
         "recurring-date": "*",
         "moment": "*",
-        "underscore": "*"
+        "underscore": "*",
+        "imagemagick": "*"
     }
 }

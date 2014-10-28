@@ -85,7 +85,7 @@ router.post('/upload', function(req, res, next) {
     var imagejson =
         ",{\"title\":\"" + imageupload.file.name +
         "\",\"image\":\"" + filelocation + imageupload.file.name +
-        "\",\"thumb\":\"" + filelocation + imageupload.file.name +
+        "\",\"thumb\":\"" + filelocation + 'thumbs/' + imageupload.file.name +
         "\"}]";
 
     // Set the location of the image list
@@ -106,11 +106,10 @@ router.post('/upload', function(req, res, next) {
         fs.writeFile(outputFilename, newstring, function(err) {
             if (err)
                 console.log(err);
-            console.log("JSON saved to " + outputFilename);
         });
     });
 
-    res.send('File Saved');
+    // res.send('File Saved');
     next();
 });
 // Export the routes

@@ -16,26 +16,30 @@ module.exports = multer({
         /*
         When file is complete begin to resize and save images
         */
+        if (file.extension == 'jpg' ||
+            file.extension == 'JPG' ||
+            file.extension == 'JPEG' ||
+            file.extension == 'jpeg'
+        ) {
+            // Resize image to thumbnail (256px wide)
+            im.resize({
+                srcPath: './' + file.path,
+                dstPath: './public/uploads/thumbs/' + file.name,
+                width: 256
+            }, function(err, stdout, stderr) {
+                if (err)
+                    console.log('fuck');
+            });
 
-        // Resize image to thumbnail (256px wide)
-        im.resize({
-            srcPath: './' + file.path,
-            dstPath: './public/uploads/thumbs/' + file.name,
-            width: 256
-        }, function(err, stdout, stderr) {
-            if (err)
-                console.log('fuck');
-        });
-
-        // Resize image to large (1280px wide)
-        im.resize({
-            srcPath: './' + file.path,
-            dstPath: './' + file.path,
-            width: 1280
-        }, function(err, stdout, stderr) {
-            if (err)
-                console.log('fuck');
-        });
-
+            // Resize image to large (1280px wide)
+            im.resize({
+                srcPath: './' + file.path,
+                dstPath: './' + file.path,
+                width: 1280
+            }, function(err, stdout, stderr) {
+                if (err)
+                    console.log('fuck');
+            });
+        }
     }
 });

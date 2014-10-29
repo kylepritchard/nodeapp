@@ -1,1 +1,5 @@
-[{"title":"dsc_0020.jpg","image":"http://localhost:3000/uploads/dsc_0020.jpg","thumb":"http://localhost:3000/uploads/thumbs/dsc_0020.jpg"},{"title":"dsc_0004.jpg","image":"http://localhost:3000/uploads/dsc_0004.jpg","thumb":"http://localhost:3000/uploads/thumbs/dsc_0004.jpg"},{"title":"dsc_0013.jpg","image":"http://localhost:3000/uploads/dsc_0013.jpg","thumb":"http://localhost:3000/uploads/thumbs/dsc_0013.jpg"}]
+[{
+    "title": "dsc_0020.jpg",
+    "image": "http://localhost:3000/uploads/dsc_0020.jpg",
+    "thumb": "http://localhost:3000/uploads/thumbs/dsc_0020.jpg"
+}]

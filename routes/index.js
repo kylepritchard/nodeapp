@@ -79,35 +79,77 @@ router.post('/upload', function(req, res, next) {
     var filelocation = "http://localhost:3000/uploads/";
 
     // Get the file information from upload
-    var imageupload = req.files;
-
-    // Create the string for saving the image info to imagelist.json
-    var imagejson =
-        ",{\"title\":\"" + imageupload.file.name +
-        "\",\"image\":\"" + filelocation + imageupload.file.name +
-        "\",\"thumb\":\"" + filelocation + 'thumbs/' + imageupload.file.name +
-        "\"}]";
+    var upload = req.files;
+    console.log(req.files);
 
     // Set the location of the image list
-    var outputFilename = 'public/uploads/imagelist.json';
+    var imagelistJSON = 'public/uploads/imagelist.json';
 
-    // Open the imagelist.json file
-    fs.readFile(outputFilename, 'utf8', function(err, data) {
-        if (err)
-            console.log(err);
-        // Parse the imagelist file and stringify for editing
-        data = JSON.parse(data);
-        var str = JSON.stringify(data);
+    // Set the location of the file list
+    var filelistJSON = 'public/uploads/filelist.json';
 
-        // Add new image information to parsed string
-        var newstring = str.replace("]", imagejson);
+    if (req.files.extension == 'jpg' ||
+        req.files.extension == 'JPG' ||
+        req.files.extension == 'JPEG' ||
+        req.files.extension == 'jpeg'
+    ) {
 
-        // Write the new information to the imagelist.json file
-        fs.writeFile(outputFilename, newstring, function(err) {
+        // Create the string for saving the image info to imagelist.json
+        var imagejson =
+            ",{\"title\":\"" + upload.file.name +
+            "\",\"image\":\"" + filelocation + upload.file.name +
+            "\",\"thumb\":\"" + filelocation + 'thumbs/' + upload.file.name +
+            "\"}]";
+
+        // Open the imagelist.json file
+        fs.readFile(imagelistJSON, 'utf8', function(err, data) {
             if (err)
                 console.log(err);
+            // Parse the imagelist file and stringify for editing
+            data = JSON.parse(data);
+            var str = JSON.stringify(data);
+
+            // Add new image information to parsed string
+            var newstring = str.replace("]", imagejson);
+
+            // Write the new information to the imagelist.json file
+            fs.writeFile(imagelistJSON, newstring, function(err) {
+                if (err)
+                    console.log(err);
+            });
         });
-    });
+
+    } else {
+
+        // Create the string for saving the image info to imagelist.json
+        var filejson =
+            ",{\"title\":\"" + upload.file.name +
+            "\",\"name\":\"" + upload.file.name +
+            "\",\"link\":\"" + filelocation + upload.file.name +
+            "\",\"link\":\"" + upload.file.size +
+            "\"}]";
+
+        // Open the imagelist.json file
+        fs.readFile(filelistJSON, 'utf8', function(err, data) {
+            if (err)
+                console.log(err);
+            // Parse the imagelist file and stringify for editing
+            data = JSON.parse(data);
+            var str = JSON.stringify(data);
+
+            // Add new image information to parsed string
+            var newstring = str.replace("]", filejson);
+
+            // Write the new information to the imagelist.json file
+            fs.writeFile(filelistJSON, newstring, function(err) {
+                if (err)
+                    console.log(err);
+            });
+        });
+
+        console.log('file');
+
+    };
 
     res.end();
 });

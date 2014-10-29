@@ -3,7 +3,7 @@
 <p>This is a paragraph</p>
 {{#if posts}}
     {{#each posts}}
-        <p>{{title}}</p>
+        <p>{{{title}}}</p>
         <p>{{content}}</p>
         <p>{{postDate}}</p>
         <a href="{{{postUrl}}}">Link</a>
@@ -20,9 +20,9 @@
 {{/if}}
 
 <form id="form" enctype="multipart/form-data" action="/api/posts" method="post">
-    <input type="text" name="title">
     <input type="text" name="content">
     <input type="file" name="upload">
+    <textarea name="title" id="title" rows="8" cols="40"></textarea>
     <input type="submit">
 </form>
 
@@ -39,5 +39,15 @@
                 location.href = '/posts';
             });
         });
+
+        $('textarea#title').redactor({
+            focus: true,
+            imageUpload: '/upload',
+            imageManagerJson: '/uploads/imagelist.json',
+            fileUpload: '/upload',
+            fileManagerJson: '/uploads/imagelist.json',
+            plugins: ['table', 'video', 'imagemanager']
+        });
+
     });
 </script>

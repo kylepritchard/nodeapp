@@ -109,8 +109,7 @@ router.post('/upload', function(req, res, next) {
         });
     });
 
-    // res.send('File Saved');
-    next();
+    res.end();
 });
 // Export the routes
 module.exports = router;

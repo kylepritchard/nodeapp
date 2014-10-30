@@ -1,8 +1,11 @@
-var Post = require('../models/post');
+var postmodels = require('../models/post');
+var moment = require('moment');
 
-// Create endpoint /api/posts for POSTS
+/*
+    Save a new post to DB
+*/
 module.exports.postPosts = function(req, res) {
-    var post = new Post();
+    var post = new postmodels.Post();
 
     // Set properties for POST data
     post.title = req.body.title;
@@ -10,8 +13,9 @@ module.exports.postPosts = function(req, res) {
     post.userId = req.user._id;
     simpleTitle = req.body.title;
     post.simpleTitle = post.title.replace(/\s+/g, '_').toLowerCase();
-    post.postDate = new Date();
+    post.postDate = moment().format('MMM Do YY');
     post.postUrl = "/posts/" + post.simpleTitle;
+    post.author = req.user.displayname;
 
     // Save the post and check for errors
     post.save(function(err) {
@@ -21,10 +25,12 @@ module.exports.postPosts = function(req, res) {
     });
 };
 
-// Create endpoint /api/posts for GET
+/*
+    Get all the posts from DB
+*/
 module.exports.getPosts = function(req, res) {
     //Use Post Model to find all posts
-    Post.find(function(err, posts) {
+    postmodels.Post.find(function(err, posts) {
         if (err)
             res.send(err);
         res.render('posts', {
@@ -33,8 +39,11 @@ module.exports.getPosts = function(req, res) {
     });
 };
 
+/*
+    Get specific post from DB
+*/
 module.exports.getPost = function(req, res) {
-    Post.findOne({
+    postmodels.Post.findOne({
         simpleTitle: req.params.post_title
     }, function(err, post) {
         if (err)
@@ -45,18 +54,19 @@ module.exports.getPost = function(req, res) {
     });
 };
 
+/*
+    Edit a post in the DB
+*/
 module.exports.putPost = function(req, res) {
-    // Use the Beer model to find a specific beer
-    Post.findOne({
+
+    postmodels.Post.findOne({
         simpleTitle: req.params.post_title
     }, function(err, post) {
         if (err)
             res.send(err);
 
-        // Update the existing beer quantity
         post.content = req.body.content;
 
-        // Save the beer and check for errors
         post.save(function(err) {
             if (err)
                 res.send(err);
@@ -65,13 +75,69 @@ module.exports.putPost = function(req, res) {
     });
 };
 
+/*
+    Post a new comment and attach to the current post in question
+*/
+module.exports.putPostComment = function(req, res) {
+
+    postmodels.Post.findOne({
+        simpleTitle: req.params.post_title
+    }, function(err, post) {
+        if (err)
+            res.send(err);
+
+        console.log(post);
+        // // Form the comment model
+        var comment = new postmodels.Comment();
+        comment.content = req.body.content;
+        comment.commentDate = moment().format('MMM Do YY');
+        comment.userId = req.user._id;
+        console.log('here');
+        console.log(post);
+        // Add comment model into post
+        post.comments.push(comment);
+
+        post.save(function(err) {
+            if (err)
+                res.send(err);
+        });
+
+        res.redirect('/posts/' + req.params.post_title);
+    });
+};
+
+/*
+    Delete a Post from DB
+*/
 module.exports.deletePost = function(req, res) {
-    // Use the Beer model to find a specific beer and remove it
-    Post.findOneAndRemove({
+
+    postmodels.Post.findOneAndRemove({
         simpleTitle: req.params.post_title
     }, function(err) {
         if (err)
             res.send(err);
+
+        res.end();
+    });
+};
+
+/*
+    Delete comment from current post
+*/
+module.exports.deletePostComment = function(req, res) {
+
+    postmodels.Post.findOne({
+        simpleTitle: req.params.post_title
+    }, function(err, post) {
+        if (err)
+            res.send(err);
+
+        post.comments.id(req.params.comment_id).remove();
+
+        post.save(function(err) {
+            if (err)
+                res.send(err);
+        });
 
         res.end();
     });

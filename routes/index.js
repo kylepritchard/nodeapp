@@ -63,6 +63,13 @@ router.route('/api/posts/:post_title')
     .put(authController.isAuthenticated, postController.putPost)
     .delete(authController.isAuthenticated, postController.deletePost);
 
+// Create routing for /posts/post_title
+router.route('/api/posts/:post_title/comment')
+    .post(authController.isAuthenticated, postController.putPostComment);
+
+// Create routing for /posts/post_title
+router.route('/api/posts/:post_title/comment/:comment_id')
+    .delete(authController.isAuthenticated, postController.deletePostComment);
 
 // ****************************************
 // Users

@@ -2,11 +2,28 @@
 
 <p>This is a paragraph</p>
 {{#if post}}
-    <p>{{post.title}}</p>
-    <p>{{post.content}}</p>
-    <p>{{post.postDate}}</p>
+    <p>{{{post.title}}}</p>
+    <p>{{{post.content}}}</p>
+    <p>{{post.postDate}} by {{post.author}}</p>
     <a href="{{{post.postUrl}}}">Link</a>
     <a href="#" id="deletePost" value="{{post.simpleTitle}}">Delete</a>
+
+    {{#if post.comments}}
+        {{#each post.comments}}
+            <p>{{content}}</p>
+            <p>{{commentDate}}</p>
+            <a href="#" id="deleteComment" value="{{_id}}">X</a>
+        {{/each}}
+
+    {{/if}}
+
+    <h1>Add Comment</h1>
+    <form id="comments" action="/api/posts/{{post.simpleTitle}}/comment" method="post">
+        <textarea name="content" rows="8" cols="40"></textarea>
+        <input type="submit" value="submit">
+    </form>
+
+
 {{else}}
     <h1>No post found</h1>
 {{/if}}
@@ -22,6 +39,19 @@
             }).done(function() {
                 console.log('deleted');
                 location.href = '/posts';
+            });
+        });
+
+        $('a#deleteComment').on('click', function(e) {
+            e.preventDefault();
+            post = $('a#deletePost').attr('value');
+            commentid = $(this).attr('value');
+            $.ajax({
+                url: "/api/posts/" + post + "/comment/" + commentid,
+                type: "DELETE"
+            }).done(function() {
+                console.log('deleted');
+                location.href = '/posts/' + post;
             });
         });
     });

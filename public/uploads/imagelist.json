@@ -1,5 +1,12 @@
-[{
-    "title": "new-dsc-logo.png",
-    "image": "http://localhost:3000/uploads/new-dsc-logo.png",
-    "thumb": "http://localhost:3000/uploads/thumbs/new-dsc-logo.png"
-}]
+[
+    {
+        "title": "new-dsc-logo.png",
+        "image": "http://localhost:3000/uploads/new-dsc-logo.png",
+        "thumb": "http://localhost:3000/uploads/thumbs/new-dsc-logo.png"
+    },
+    {
+        "title": "61675.jpg",
+        "image": "/uploads/61675.jpg",
+        "thumb": "/uploads/thumbs/61675.jpg"
+    }
+]

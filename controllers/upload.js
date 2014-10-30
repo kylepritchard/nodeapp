@@ -55,7 +55,7 @@ module.exports = multer({
 module.exports.postUpload = function(req, res, next) {
 
     // Set file location for retrieving images
-    var filelocation = "http://localhost:3000/uploads/";
+    var filelocation = "/uploads/";
 
     // Get the file information from upload
     var upload = req.files;

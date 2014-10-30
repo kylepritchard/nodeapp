@@ -71,7 +71,7 @@ router.route('/api/posts/:post_title')
 router.route('/users')
     .get(authController.isAuthenticated, userController.getUsers);
 
-router.route('/api/users/')
+router.route('/api/users')
     .post(userController.postUsers);
 
 /*

@@ -1,7 +1,7 @@
 var Post = require('../models/post');
 
 // Create endpoint /api/posts for POSTS
-exports.postPosts = function(req, res) {
+module.exports.postPosts = function(req, res) {
     var post = new Post();
 
     // Set properties for POST data
@@ -22,7 +22,7 @@ exports.postPosts = function(req, res) {
 };
 
 // Create endpoint /api/posts for GET
-exports.getPosts = function(req, res) {
+module.exports.getPosts = function(req, res) {
     //Use Post Model to find all posts
     Post.find(function(err, posts) {
         if (err)
@@ -33,19 +33,19 @@ exports.getPosts = function(req, res) {
     });
 };
 
-exports.getPost = function(req, res) {
+module.exports.getPost = function(req, res) {
     Post.findOne({
         simpleTitle: req.params.post_title
     }, function(err, post) {
         if (err)
             res.send(err);
-        res.render('index', {
+        res.render('post', {
             post: post
         });
     });
 };
 
-exports.putPost = function(req, res) {
+module.exports.putPost = function(req, res) {
     // Use the Beer model to find a specific beer
     Post.findOne({
         simpleTitle: req.params.post_title
@@ -65,7 +65,7 @@ exports.putPost = function(req, res) {
     });
 };
 
-exports.deletePost = function(req, res) {
+module.exports.deletePost = function(req, res) {
     // Use the Beer model to find a specific beer and remove it
     Post.findOneAndRemove({
         simpleTitle: req.params.post_title

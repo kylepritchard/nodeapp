@@ -1,16 +1,14 @@
 <h1>hello</h1>
 
 <p>This is a paragraph</p>
-{{#if posts}}
-    {{#each posts}}
-        <p>{{{title}}}</p>
-        <p>{{{content}}}</p>
-        <p>{{postDate}}</p>
-        <a href="{{{postUrl}}}">Link</a>
-        <a href="#" id="deletePost" value="{{simpleTitle}}">Delete</a>
-    {{/each}}
+{{#if post}}
+    <p>{{post.title}}</p>
+    <p>{{post.content}}</p>
+    <p>{{post.postDate}}</p>
+    <a href="{{{post.postUrl}}}">Link</a>
+    <a href="#" id="deletePost" value="{{post.simpleTitle}}">Delete</a>
 {{else}}
-    <h1>No posts found</h1>
+    <h1>No post found</h1>
 {{/if}}
 
 <script>

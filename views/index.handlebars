@@ -6,18 +6,3 @@
     <input type="file" name="upload">
     <input type="submit">
 </form>
-
-<script>
-    $(document).ready(function() {
-
-        $('textarea').redactor({
-            focus: true,
-            imageUpload: '/upload',
-            imageManagerJson: '/uploads/imagelist.json',
-            fileUpload: '/upload',
-            fileManagerJson: '/uploads/filelist.json',
-            plugins: ['table', 'video', 'imagemanager', 'filemanager', 'fontsize', 'fontfamily', 'fontcolor']
-        });
-
-    });
-</script>

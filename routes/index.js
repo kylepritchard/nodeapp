@@ -10,10 +10,11 @@ var postController = require('../controllers/posts');
 var userController = require('../controllers/users');
 var authController = require('../controllers/auth');
 var uploadController = require('../controllers/upload');
+var adminController = require('../controllers/admin');
 
-// ****************************************
-// Homepage
-// ****************************************
+/*
+    Homepage
+*/
 
 router.get('/', function(req, res) {
     res.render('index');
@@ -43,9 +44,9 @@ router.get('/', function(req, res) {
     // res.json(userDates);
 });
 
-// ****************************************
-// Users
-// ****************************************
+/*
+    Posts
+*/
 
 // Display posts /posts & /posts/simpleTitle
 router.route('/posts')
@@ -71,9 +72,9 @@ router.route('/api/posts/:post_title/comment')
 router.route('/api/posts/:post_title/comment/:comment_id')
     .delete(authController.isAuthenticated, postController.deletePostComment);
 
-// ****************************************
-// Users
-// ****************************************
+/*
+    Users
+*/
 
 router.route('/users')
     .get(authController.isAuthenticated, userController.getUsers);
@@ -87,6 +88,16 @@ router.route('/api/users')
 
 router.route('/upload')
     .post(uploadController.postUpload);
+
+/*
+    Admin
+*/
+
+router.route('/admin')
+    .get(authController.isAuthenticated, adminController.getDashboard);
+
+router.route('/admin/posts')
+    .get(adminController.getPosts);
 
 // Export the routes
 module.exports = router;

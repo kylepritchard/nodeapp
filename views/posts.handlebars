@@ -13,6 +13,15 @@
     <h1>No posts found</h1>
 {{/if}}
 
+<h2>Add new Post</h2>
+
+<form id="form" enctype="multipart/form-data" action="/api/posts" method="post">
+    <input type="title" name="title">
+    <textarea name="content" id="content"></textarea>
+    <input type="file" name="upload">
+    <input type="submit">
+</form>
+
 <script>
     $(document).ready(function() {
         $('a#deletePost').on('click', function(e) {
@@ -25,6 +34,15 @@
                 console.log('deleted');
                 location.href = '/posts';
             });
+        });
+
+        $('textarea').redactor({
+            focus: true,
+            imageUpload: '/upload',
+            imageManagerJson: '/uploads/imagelist.json',
+            fileUpload: '/upload',
+            fileManagerJson: '/uploads/filelist.json',
+            plugins: ['table', 'video', 'imagemanager', 'filemanager', 'fontsize', 'fontfamily', 'fontcolor']
         });
     });
 </script>

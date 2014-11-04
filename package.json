@@ -1,18 +1,29 @@
 {
-    "name": "blog",
-    "main": "server.js",
-    "dependencies": {
-        "bcrypt-nodejs": "^0.0.3",
-        "body-parser": "*",
-        "express": "^4.0",
-        "mongoose": "*",
-        "passport": "^0.2.1",
-        "passport-http": "^0.2.2",
-        "express-handlebars": "*",
-        "multer": "*",
-        "recurring-date": "*",
-        "moment": "*",
-        "underscore": "*",
-        "imagemagick": "*"
-    }
+  "name": "blog",
+  "main": "server.js",
+  "private": true,
+  "dependencies": {
+    "bcrypt-nodejs": "^0.0.3",
+    "body-parser": "*",
+    "express": "^4.0",
+    "express-handlebars": "*",
+    "imagemagick": "*",
+    "moment": "*",
+    "mongoose": "*",
+    "multer": "*",
+    "passport": "^0.2.1",
+    "passport-http": "^0.2.2",
+    "recurring-date": "*",
+    "underscore": "*"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-concat-css": "^0.3.1",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-stylus": "^0.20.0",
+    "grunt-contrib-uglify": "~0.5.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-nodemon": "^0.3.0",
+    "grunt-uncss": "^0.3.7"
+  }
 }

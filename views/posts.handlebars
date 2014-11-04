@@ -21,28 +21,3 @@
     <input type="file" name="upload">
     <input type="submit">
 </form>
-
-<script>
-    $(document).ready(function() {
-        $('a#deletePost').on('click', function(e) {
-            e.preventDefault();
-            post = $(this).attr('value');
-            $.ajax({
-                url: "/api/posts/" + post,
-                type: "DELETE"
-            }).done(function() {
-                console.log('deleted');
-                location.href = '/posts';
-            });
-        });
-
-        $('textarea').redactor({
-            focus: true,
-            imageUpload: '/upload',
-            imageManagerJson: '/uploads/imagelist.json',
-            fileUpload: '/upload',
-            fileManagerJson: '/uploads/filelist.json',
-            plugins: ['table', 'video', 'imagemanager', 'filemanager', 'fontsize', 'fontfamily', 'fontcolor']
-        });
-    });
-</script>

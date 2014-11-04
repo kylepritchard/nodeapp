@@ -14,9 +14,14 @@ module.exports.getPosts = function(req, res) {
     postmodels.Post.find(function(err, posts) {
         if (err)
             res.send(err);
+        // res.render('admin/posts/posts', {
+        //     posts: posts,
+        //     layout: 'admin'
+        // });
+
         res.render('admin/posts/posts', {
             posts: posts,
-            layout: 'admin'
+            layout: !req.xhr
         });
     });
 };

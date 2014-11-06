@@ -18,7 +18,7 @@
     {{/if}}
 
     <h1>Add Comment</h1>
-    <form id="comments" action="/api/posts/{{post.simpleTitle}}/comment" method="post">
+    <form id="comments" action="/posts/{{post.simpleTitle}}/comment" method="post">
         <textarea name="content" rows="8" cols="40"></textarea>
         <input type="submit" value="submit">
     </form>

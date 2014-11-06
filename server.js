@@ -5,9 +5,6 @@ var express = require('express'),
     passport = require('passport'),
     exphbs = require('express-handlebars');
 
-//Load Routing
-var routes = require('./routes/index');
-
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost:27017/blog');
 
@@ -27,7 +24,7 @@ app.use(uploads);
 app.use(passport.initialize());
 
 // Setup cors for cross domain posting
-var cors = require('./controllers/cors');
+var cors = require('./server/cors');
 app.use(cors);
 
 // Set directory for views
@@ -47,7 +44,10 @@ app.set('view engine', 'handlebars');
 var port = process.env.PORT || 3000;
 
 // Register all our routes with /
-app.use('/', routes);
+// app.use('/', routes);
+
+//Load Routing
+var routes = require('./routes/index')(app);
 
 // Start server
 app.listen(port);

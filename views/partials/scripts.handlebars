@@ -4,7 +4,7 @@
             e.preventDefault();
             post = $(this).attr('value');
             $.ajax({
-                url: "/api/posts/" + post,
+                url: "/posts/" + post,
                 type: "DELETE"
             }).done(function() {
                 alert('deleted');

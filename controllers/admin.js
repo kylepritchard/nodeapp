@@ -21,7 +21,7 @@ module.exports.getPosts = function(req, res) {
 
         res.render('admin/posts/posts', {
             posts: posts,
-            layout: !req.xhr
+            layout: 'admin'
         });
     });
 };

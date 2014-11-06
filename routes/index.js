@@ -7,6 +7,7 @@ module.exports = function(app) {
     app.use('/admin', require('../server/admin'));
     app.use('/users', require('../server/users'));
     app.use('/posts', require('../server/posts'));
+    app.use('/api', require('../server/api'));
 
     // Site Homepage
     app.get('/', function(req, res) {

@@ -1,10 +1,10 @@
 'use strict';
 
-var User = require('./user.model');
+var usermodels = require('./user.model');
 
 // Create endpoint /api/users for POST
 exports.newUser = function(req, res) {
-    var user = new User({
+    var user = new usermodels.User({
         username: req.body.username,
         password: req.body.password,
         displayname: req.body.displayname
@@ -22,7 +22,7 @@ exports.newUser = function(req, res) {
 
 // Create endpoint /api/users for GET
 exports.getUsers = function(req, res) {
-    User.find(function(err, users) {
+    usermodels.User.find(function(err, users) {
         if (err)
             res.send(err)
 

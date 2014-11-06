@@ -10,6 +10,7 @@
     "imagemagick": "*",
     "moment": "*",
     "mongoose": "*",
+    "morgan": "^1.4.1",
     "multer": "*",
     "passport": "^0.2.1",
     "passport-http": "^0.2.2",

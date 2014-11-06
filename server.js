@@ -3,7 +3,8 @@ var express = require('express'),
     mongoose = require('mongoose'),
     bodyParser = require('body-parser'),
     passport = require('passport'),
-    exphbs = require('express-handlebars');
+    exphbs = require('express-handlebars'),
+    morgan = require('morgan');
 
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost:27017/blog');
@@ -15,6 +16,9 @@ var app = express();
 app.use(bodyParser.urlencoded({
     extended: true
 }));
+
+// Logging for shits and giggles
+app.use(morgan('dev'));
 
 // Manage uploads & image resizing
 var uploads = require('./controllers/upload');

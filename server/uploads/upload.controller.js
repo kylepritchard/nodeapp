@@ -48,6 +48,7 @@ module.exports = multer({
     }
 });
 
+
 /*
     When a file is uploaded then we want to take its information
     and save the basic data into a json file so that Redactor can

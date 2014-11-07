@@ -17,12 +17,14 @@ var controller = require('./admin.controller');
 // GET requests
 router.get('/', authController.isAuthenticated, controller.getDashboard);
 router.get('/posts', authController.isAuthenticated, controller.getPosts);
+router.get('/posts/newpost', authController.isAuthenticated, controller.addPost);
+router.get('/posts/:post_title', authController.isAuthenticated, controller.getPost);
 
 // POST requests
-// router.get('/posts', controller.getPosts);
+router.post('/posts/newpost', authController.isAuthenticated, controller.postPost);
 
 // UPDATE requests
-// router.put('/:username', controller.putUser);
+router.post('/posts/:post_title', controller.editPost); //post command as it is from form
 
 // DELETE requests
 // router.delete('/:username', controller.deleteUser);

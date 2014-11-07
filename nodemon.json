@@ -1,3 +1,9 @@
 {
-    "ignore": ["uploads"]
+    "restartable": "rs",
+    "ignore": [
+        "uploads",
+        ".git",
+        "node_modules/**/node_modules"
+    ],
+    "ext": "js"
 }

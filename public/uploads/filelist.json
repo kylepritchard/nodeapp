@@ -1,6 +1,15 @@
-[{
-    "title": "man-to-lhr-payment.doc",
-    "name": "man-to-lhr-payment.doc",
-    "link": "http://localhost:3000/uploads/man-to-lhr-payment.doc",
-    "size": 735232
-}]
+[
+    {
+        "title": "man-to-lhr-payment.doc",
+        "name": "man-to-lhr-payment.doc",
+        "link": "http://localhost:3000/uploads/man-to-lhr-payment.doc",
+        "size": 735232
+    },
+    {
+        "title": "don-t-stop-the-madness.mp3",
+        "name": "don-t-stop-the-madness.mp3",
+        "link": "/uploads/don-t-stop-the-madness.mp3",
+        "size": 13274860,
+        "type": "mp3"
+    }
+]

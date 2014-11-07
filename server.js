@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({
 app.use(morgan('dev'));
 
 // Manage uploads & image resizing
-var uploads = require('./controllers/upload');
+var uploads = require('./server/uploads/upload.controller');
 app.use(uploads);
 
 //Use passport for authentication

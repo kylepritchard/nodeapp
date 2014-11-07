@@ -1,5 +1,5 @@
 
-/* line 286 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
+/* line 226 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
 
 /* line 1 : /Users/kylepritchard/Desktop/nodeapp/blog/node_modules/grunt-contrib-stylus/node_modules/stylus/lib/functions/index.styl */
 
@@ -509,6 +509,6 @@ body {
 
 /* line 1 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/style.styl */
 th {
-  background-color: #008000;
+  background-color: #f00;
   color: #fff;
 }

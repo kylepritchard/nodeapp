@@ -2,6 +2,23 @@ module.exports = function(grunt) {
 
     // Project configuration.
     grunt.initConfig({
+        concurrent: {
+            serve: {
+                tasks: ['nodemon', 'watch'],
+                options: {
+                    logConcurrentOutput: true
+                }
+            }
+        },
+        nodemon: {
+            dev: {
+                script: 'server.js',
+                options: {
+                    ignore: ['node_modules', 'public/uploads', 'data', 'views'],
+                    ext: 'js'
+                }
+            }
+        },
         stylus: {
             compile: {
                 options: {
@@ -9,12 +26,12 @@ module.exports = function(grunt) {
                     compress: false
                 },
                 files: {
-                    'public/css/comstyle.css': ['src/css/*.styl']
+                    'public/css/style.css': 'src/css/*.styl'
                 }
             },
             autocompress: {
                 files: {
-                    'public/css/comstyle.min.css': 'src/css/*.styl'
+                    'public/css/style.min.css': 'src/css/*.styl'
                 }
             },
         },
@@ -39,8 +56,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-stylus');
     grunt.loadNpmTasks('grunt-concat-css');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-nodemon');
+    grunt.loadNpmTasks('grunt-concurrent');
+
 
     // Default task(s).
-    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('default', ['concurrent:serve']);
 
 };

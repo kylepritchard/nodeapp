@@ -1,49 +1,68 @@
-<!-- Page Heading -->
+{{!-- Page Heading --}}
 <div class="row">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title">Panel title</h3>
-        </div>
-        <div class="panel-body">
-            Panel content
-            <div class="table-responsive">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>Title</th>
-                            <th>Posted on</th>
-                            <th>Author</th>
-                            <th>Edit</th>
-                            <th>Delete</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {{#if posts}}
-                            {{#each posts}}
-                                <tr>
-                                    <td><a href="{{{postUrl}}}">{{title}}</a>
-                                    </td>
-                                    <td>{{postDate}}</td>
-                                    <td>{{author}}</td>
-                                    <td>
-                                        <a href="/admin/posts/{{simpleTitle}}" value="{{simpleTitle}}" id="editPost">E</a>
-                                    </td>
-                                    <td>
-                                        <a href="#" value="{{simpleTitle}}" id="deletePost">X</a>
-                                    </td>
-                                </tr>
-                            {{/each}}
-                        {{else}}
-                            <tr>
-                                <td colspan="5">No posts made!</td>
-                            </tr>
-                        {{/if}}
+    <div class="col-lg-12">
+        <h1 class="page-header">Posts</h1>
+        <ol class="breadcrumb">
+            <li>
+                <i class="fa fa-dashboard"></i> <a href="index.html">Dashboard</a>
+            </li>
+            <li class="active">
+                <i class="fa fa-edit"></i> Forms
+            </li>
+        </ol>
+    </div>
+</div>
 
-                    </tbody>
-                </table>
+{{!-- Content --}}
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading clearfix">
+                <h3 class="panel-title pull-left">Panel title</h3>
+                <a href="/admin/posts/newpost" class="btn btn-primary pull-right">
+                    <i class="fa fa-envelope"></i> Add new post
+                </a>
+            </div>
+            <div class="panel-body">
+                Panel content
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Posted on</th>
+                                <th>Author</th>
+                                <th class="col-md-1">Edit</th>
+                                <th class="col-md-1">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#if posts}}
+                                {{#each posts}}
+                                    <tr>
+                                        <td><a href="/admin{{{postUrl}}}">{{title}}</a>
+                                        </td>
+                                        <td>{{postDate}}</td>
+                                        <td>{{author}}</td>
+                                        <td class="col-md-1">
+                                            <a href="/admin/posts/{{simpleTitle}}" value="{{simpleTitle}}" id="editPost" class="btn btn-primary btn-xs">Edit Post</a>
+                                        </td>
+                                        <td class="col-md-1">
+                                            <a href="#" value="{{simpleTitle}}" id="deletePost" class="btn btn-danger btn-xs">Delete Post</a>
+                                        </td>
+                                    </tr>
+                                {{/each}}
+                            {{else}}
+                                <tr>
+                                    <td colspan="5">No posts made!</td>
+                                </tr>
+                            {{/if}}
+
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
-
 </div>
 <!-- /.row -->

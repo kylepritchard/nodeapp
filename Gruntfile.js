@@ -2,6 +2,20 @@ module.exports = function(grunt) {
 
     // Project configuration.
     grunt.initConfig({
+        shell: {
+            mongo: {
+                command: 'sh mongorunning.sh',
+                options: {
+                    async: true,
+                    stdout: false,
+                    stderr: true,
+                    failOnError: true,
+                    execOptions: {
+                        detached: false
+                    }
+                }
+            }
+        },
         concurrent: {
             serve: {
                 tasks: ['nodemon', 'watch'],
@@ -11,11 +25,13 @@ module.exports = function(grunt) {
             }
         },
         nodemon: {
-            dev: {
+            run: {
                 script: 'server.js',
                 options: {
-                    ignore: ['node_modules', 'public/uploads', 'data', 'views'],
-                    ext: 'js'
+                    args: ['--exitcrash'],
+                    ignore: ['node_modules', 'public/uploads', 'data'],
+                    ext: 'js,handlebars'
+
                 }
             }
         },
@@ -26,24 +42,40 @@ module.exports = function(grunt) {
                     compress: false
                 },
                 files: {
-                    'public/css/style.css': 'src/css/*.styl'
+                    'public/css/stylus.css': 'src/css/*.styl'
                 }
-            },
-            autocompress: {
-                files: {
-                    'public/css/style.min.css': 'src/css/*.styl'
-                }
-            },
+            }
         },
         concat_css: {
             all: {
-                src: ["public/css/*.css"],
-                dest: "public/css/compiled.css"
+                src: ['src/css/*.css', 'src/css/build/stylus.css'],
+                dest: "public/css/style.comb.min.css"
             },
+        },
+        cssmin: {
+            combine: {
+                files: {
+                    'public/css/style.comb.min.css': ['src/css/*.css', 'src/css/build/stylus.css']
+                }
+            }
+        },
+        uncss: {
+            dist: {
+                options: {
+                    urls: ['http://localhost:3000/posts'],
+                    stylesheets: [
+                        'public/css/bootstrap.min.css',
+                        'sb-admin.css',
+                    ]
+                },
+                files: {
+                    'public/css/comb.min.css': ['*.*']
+                }
+            }
         },
         watch: {
             stylus: {
-                files: ['**/*.styl'],
+                files: ['**/*.styl', '**/*.css'],
                 tasks: ['stylus', 'concat_css'],
                 options: {
                     spawn: false,
@@ -53,14 +85,18 @@ module.exports = function(grunt) {
 
     });
 
+    grunt.loadNpmTasks('grunt-shell-spawn');
     grunt.loadNpmTasks('grunt-contrib-stylus');
     grunt.loadNpmTasks('grunt-concat-css');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-nodemon');
     grunt.loadNpmTasks('grunt-concurrent');
-
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-uncss');
 
     // Default task(s).
-    grunt.registerTask('default', ['concurrent:serve']);
+    grunt.registerTask('default', ['shell', 'concurrent:serve']);
+    grunt.registerTask('dist', ['shell', 'uncss']);
+
 
 };

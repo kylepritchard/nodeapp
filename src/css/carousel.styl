@@ -8,15 +8,13 @@ body
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
 
 .navbar-wrapper
-      position absolute
-      top 0
-      right 0
-      left 0
-      z-index 20
+    position absolute
+    top 0
+    right 0
+    left 0
+    z-index 20
 
-/* Flip around the padding for proper display in narrow viewports */
-
-    > .container
+    >.container
         padding-right 0
         padding-left 0
 
@@ -43,7 +41,7 @@ body
 /* Since positioning the image, we need to help out the caption */
 
 .carousel-caption
-  z-index 10
+    z-index 10
 
 /* Declare heights because of positioning of img element */
 
@@ -119,5 +117,6 @@ body
 
 
 @media (min-width 992px)
+
     .featurette-heading
         margin-top 120px

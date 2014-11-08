@@ -1,0 +1,134 @@
+/* line 286 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+/* line 1 : /Users/kylepritchard/Desktop/nodeapp/blog/node_modules/grunt-contrib-stylus/node_modules/stylus/lib/functions/index.styl */
+
+/* line 1 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+body {
+  padding-bottom: 40px;
+  color: #5a5a5a;
+}
+
+/* line 6 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* line 8 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+
+/* line 10 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+/* line 17 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+/* Flip around the padding for proper display in narrow viewports */
+
+/* line 19 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+> .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* line 23 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+/* line 27 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+/* line 31 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* line 33 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+/* Carousel base class */
+
+/* line 35 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+/* line 39 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+/* line 43 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+/* Since positioning the image, we need to help out the caption */
+
+/* line 45 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+/* line 48 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+/* Declare heights because of positioning of img element */
+
+/* line 50 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+/* line 51 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+/* line 52 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+/* line 59 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* line 61 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+/* Center align the text within the three columns below the carousel */
+
+/* line 63 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+/* line 64 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+/* line 68 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+/* line 69 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+/* line 72 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+/* line 73 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+/* line 77 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+/* Featurettes
+------------------------- */
+
+/* line 80 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+/* line 82 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+/* Space out the Bootstrap <hr> more */
+
+/* line 84 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+/* Thin out the marketing headings */
+
+/* line 86 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+/* line 91 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+/* line 94 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+@media (min-width: 768px) {
+  /* line 97 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+  /* line 100 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+  /* line 104 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+  /* line 111 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+  /* line 112 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+  /* line 117 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+}
+
+/* line 121 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+
+@media (min-width: 992px) {
+  /* line 122 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl */
+}
+
+/* line 286 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/style.styl */
+
+/* line 1 : /Users/kylepritchard/Desktop/nodeapp/blog/node_modules/grunt-contrib-stylus/node_modules/stylus/lib/functions/index.styl */

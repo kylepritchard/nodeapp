@@ -24,7 +24,6 @@
                 </a>
             </div>
             <div class="panel-body">
-                Panel content
                 <div class="table-responsive">
                     <table class="table table-striped">
                         <thead>
@@ -45,10 +44,13 @@
                                         <td>{{postDate}}</td>
                                         <td>{{author}}</td>
                                         <td class="col-md-1">
-                                            <a href="/admin/posts/{{simpleTitle}}" value="{{simpleTitle}}" id="editPost" class="btn btn-primary btn-xs">Edit Post</a>
+                                            <a href="/admin/posts/{{simpleTitle}}" value="{{simpleTitle}}" id="editPost" class="btn btn-primary btn-xs">
+                                                <i class="fa fa-envelope"></i> Edit Post</a>
                                         </td>
                                         <td class="col-md-1">
-                                            <a href="#" value="{{simpleTitle}}" id="deletePost" class="btn btn-danger btn-xs">Delete Post</a>
+                                            <a href="#" value="{{simpleTitle}}" id="deletePost" class="btn btn-danger btn-xs">
+                                                <i class="fa fa-ban"></i> Delete Post
+                                            </a>
                                         </td>
                                     </tr>
                                 {{/each}}

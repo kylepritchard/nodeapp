@@ -24,7 +24,13 @@ exports.postPosts = function(req, res) {
     post.save(function(err) {
         if (err)
             res.send(err);
-        res.json(post);
+
+        postmodels.Post.find(function(err, posts) {
+            if (err)
+                res.send(err);
+            res.json(posts);
+        });
+
     });
 };
 
@@ -69,7 +75,12 @@ exports.putPost = function(req, res) {
         post.save(function(err) {
             if (err)
                 res.send(err);
-            res.json(post);
+
+            postmodels.Post.find(function(err, posts) {
+                if (err)
+                    res.send(err);
+                res.json(posts);
+            });
         });
     });
 };
@@ -114,7 +125,11 @@ exports.deletePost = function(req, res) {
         if (err)
             res.send(err);
 
-        res.send('deleted');
+        postmodels.Post.find(function(err, posts) {
+            if (err)
+                res.send(err);
+            res.json(posts);
+        });
     });
 };
 

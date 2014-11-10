@@ -1,0 +1,21 @@
+<div class="jumbotron text-center">
+    <h1>Home Page 4 Life</h1>
+
+    <div ng-repeat="post in posts">
+        <p ng-bind="post.title"></p>
+        <p ng-bind-html="post.content | unsafe"></p>
+
+        <button ng-click="deletePost(post.simpleTitle)"></button>
+    </div>
+    <div ng-if="posts.length == 0">
+        <p>No posts</p>
+    </div>
+</div>
+
+<h2>Add new Post</h2>
+
+<form id="form" enctype="multipart/form-data">
+    <input type="title" name="title" ng-model="formData.title">
+    <textarea ng-model="formData.content" redactor="redactorOptions"></textarea>
+    <input type="submit" ng-click="createPost()">
+</form>

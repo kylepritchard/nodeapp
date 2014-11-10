@@ -5,13 +5,17 @@ module.exports = function(app) {
     // Routes to modules
     app.use('/upload', require('../server/uploads'));
     app.use('/admin', require('../server/admin'));
-    app.use('/users', require('../server/users'));
-    app.use('/posts', require('../server/posts'));
+    // app.use('/users', require('../server/users'));
+    // app.use('/posts', require('../server/posts'));
     app.use('/api', require('../server/api'));
 
     // Site Homepage
-    app.get('/', function(req, res) {
-        res.render('index');
+    // app.get('/', function(req, res) {
+    //     res.render('index');
+    // });
+
+    app.get('*', function(req, res) {
+        res.sendfile('./public/views/index.html'); // load our public/index.html file
     });
 
 };

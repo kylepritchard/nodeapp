@@ -14,12 +14,12 @@ var multer = require('multer'),
 */
 
 module.exports = multer({
-    dest: '../../public/uploads/',
+    dest: './public/uploads/',
     rename: function(fieldname, filename) {
         return filename.replace(/\W+/g, '-').toLowerCase();
     },
     onFileUploadComplete: function(file) {
-
+        console.log(file.path);
         /*
         When file is complete begin to resize and save images
         */
@@ -27,8 +27,8 @@ module.exports = multer({
 
             // Resize image to thumbnail (256px wide)
             im.resize({
-                srcPath: '../../' + file.path,
-                dstPath: '../../public/uploads/thumbs/' + file.name,
+                srcPath: './' + file.path,
+                dstPath: './public/uploads/thumbs/' + file.name,
                 width: 100
             }, function(err, stdout, stderr) {
                 if (err)
@@ -37,8 +37,8 @@ module.exports = multer({
 
             // Resize image to large (1280px wide)
             im.resize({
-                srcPath: '../../' + file.path,
-                dstPath: '../../' + file.path,
+                srcPath: './' + file.path,
+                dstPath: './' + file.path,
                 width: 1280
             }, function(err, stdout, stderr) {
                 if (err)

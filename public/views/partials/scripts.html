@@ -1,0 +1,32 @@
+<script>
+    $(document).ready(function() {
+
+        $('a#deletePost').on('click', function(e) {
+            e.preventDefault();
+            post = $(this).attr('value');
+            $.ajax({
+                url: "/posts/" + post,
+                type: "DELETE"
+            }).done(function() {
+                alert('deleted');
+                location.reload();
+            });
+        });
+
+        console.log($(location).attr('pathname'));
+
+        if ($(location).attr('pathname').indexOf('posts') >= 0) {
+            $('li#posts').attr('class', 'active');
+        };
+
+        $('textarea').redactor({
+            focus: true,
+            minHeight: 300, // pixels
+            imageUpload: '/upload',
+            imageManagerJson: '/uploads/imagelist.json',
+            fileUpload: '/upload',
+            fileManagerJson: '/uploads/filelist.json',
+            plugins: ['table', 'video', 'imagemanager', 'filemanager', 'fontsize', 'fontfamily', 'fontcolor']
+        });
+    });
+</script>

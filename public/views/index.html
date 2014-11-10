@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+
+    <title>Blog app using angular</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/animate.css/animate.min.css">
+    <link rel="stylesheet" href="css/stylus.css">
+    <!-- custom styles -->
+
+    <!-- JS -->
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="libs/angular/angular.min.js"></script>
+    <script src="libs/angular-route/angular-route.min.js"></script>
+    <script src="libs/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="libs/angular-redactor/angular-redactor.js"></script>
+    <script src="libs/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="libs/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+    <!-- ANGULAR CUSTOM -->
+    <script src="js/controllers/Home.js"></script>
+    <script src="js/controllers/Posts.js"></script>
+    <script src="js/controllers/Carousel.js"></script>
+    <script src="js/services/Posts.js"></script>
+    <script src="js/appRouter.js"></script>
+    <script src="js/app.js"></script>
+
+    <!-- REDACTOR -->
+    <script src="redactor/redactor.min.js"></script>
+    <script src="redactor/plugins/all.js"></script>
+    <link rel="stylesheet" href="redactor/redactor.css">
+
+</head>
+
+<body ng-app="blogApp" ng-controller="HomeController">
+
+    <div ng-include="'./views/partials/navigation.html'"></div>
+    <div ng-include="'./views/partials/carousel.html'"></div>
+
+    <div class="container">
+
+        <!-- ANGULAR DYNAMIC CONTENT -->
+        <div ng-view></div>
+
+    </div>
+
+</body>
+
+</html>

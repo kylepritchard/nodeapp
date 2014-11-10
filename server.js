@@ -17,6 +17,12 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
+app.use(bodyParser.json()); // parse application/json
+app.use(bodyParser.json({
+    type: 'application/vnd.api+json'
+})); // parse application/vnd.api+json as json
+
+
 // Logging for shits and giggles
 app.use(morgan('dev'));
 

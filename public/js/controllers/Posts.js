@@ -1,19 +1,16 @@
-angular.module('PostsCtrl', []).controller('PostsController', function($scope, $http, $sce) {
+angular.module('PostsCtrl', []).controller('PostsController', function($scope, $http) {
 
     // Ensure any forms are empty of data
     $scope.formData = {};
 
     // Give options to any redactor instances
     $scope.redactorOptions = {
-        focus: true,
         imageUpload: '/upload',
         imageManagerJson: '/uploads/imagelist.json',
         fileUpload: '/upload',
         fileManagerJson: '/uploads/filelist.json',
         plugins: ['table', 'video', 'imagemanager', 'filemanager', 'fontsize', 'fontfamily', 'fontcolor']
     };
-
-
 
     //GET posts
     $http.get('/api/posts')

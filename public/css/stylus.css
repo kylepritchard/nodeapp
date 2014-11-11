@@ -300,7 +300,7 @@ ul.alert-dropdown {
 
 /* line 13 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/stylus/lib/functions/index.styl */
 
-/* line 28 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/index.styl */
+/* line 66 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/index.styl */
 
 /* line 10 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/index.styl */
 
@@ -320,7 +320,7 @@ ul.alert-dropdown {
 
 /* line 90 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/flex.styl */
 
-/* line 28 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/gradients.styl */
+/* line 66 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/gradients.styl */
 
 /* line 11 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/gradients.styl */
 
@@ -348,7 +348,7 @@ ul.alert-dropdown {
 
 /* line 5 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/reset.styl */
 
-/* line 28 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/text/index.styl */
+/* line 66 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/text/index.styl */
 
 /* line 12 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/text/index.styl */
 
@@ -424,4 +424,61 @@ ul.alert-dropdown {
   -o-animation-delay: 1s;
   -ms-animation-delay: 1s;
   animation-delay: 1s;
+}
+
+/* line 32 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/style.styl */
+#page-wrapper {
+  margin-top: 50px;
+}
+
+/* line 37 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/style.styl */
+/**
+ * angular-growl - v0.4.0 - 2013-11-19
+ * https//github.com/marcorinck/angular-growl
+ * Copyright (c) 2013 Marco Rinck Licensed MIT
+*/
+
+/* line 43 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/style.styl */
+.growl {
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  width: 400px;
+  height: 100px;
+  margin-left: -200px;
+  z-index: 9999;
+  opacity: 0.95;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
+  filter: alpha(opacity=95);
+}
+
+/* line 53 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/style.styl */
+.growl-item {
+  height: 100px;
+}
+
+/* line 56 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/style.styl */
+.growl-item.ng-enter,
+.growl-item.ng-leave {
+  -webkit-transition: 5s linear all;
+  -moz-transition: 5s linear all;
+  -o-transition: 5s linear all;
+  -ms-transition: 5s linear all;
+  transition: 5s linear all;
+}
+
+/* line 60 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/style.styl */
+.growl-item.ng-enter,
+.growl-item.ng-leave.ng-leave-active {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+
+/* line 64 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/style.styl */
+.growl-item.ng-leave,
+.growl-item.ng-enter.ng-enter-active {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
 }

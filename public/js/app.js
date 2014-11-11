@@ -4,9 +4,12 @@ var app = angular.module('blogApp', [
     'angular-redactor',
     'ngSanitize',
     'ui.bootstrap',
+    'angular-growl',
     'HomeCtrl',
     'PostsCtrl',
-    'CarouselCtrl'
+    'CarouselCtrl',
+    'AdminCtrl',
+    'angularMoment'
 ]);
 
 // Add filters

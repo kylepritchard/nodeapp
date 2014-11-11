@@ -19,6 +19,7 @@ var controller = require('./api.controller');
 // Posts
 router.get('/posts', controller.getPosts);
 router.get('/posts/:post_title', controller.getPost);
+router.get('/dashboard', controller.dashCount);
 
 // Users
 router.get('/users', authController.isAuthenticated, controller.getUsers);

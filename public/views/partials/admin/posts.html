@@ -1,0 +1,69 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Posts</h1>
+        <ol class="breadcrumb">
+            <li>
+                <i class="fa fa-dashboard"></i> <a href="index.html">Dashboard</a>
+            </li>
+            <li class="active">
+                <i class="fa fa-edit"></i> Forms
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading clearfix">
+                <h3 class="panel-title pull-left">Panel title</h3>
+                <a href="/admin/posts/addnewpost" class="btn btn-primary pull-right">
+                    <i class="fa fa-envelope"></i> Add new post
+                </a>
+            </div>
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Posted on</th>
+                                <th>Author</th>
+                                <th class="col-md-1">Edit</th>
+                                <th class="col-md-1">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody ng-repeat="post in posts">
+                            <tr>
+                                <td>
+                                    <a href="#" ng-bind="post.title"></a>
+                                </td>
+                                <td ng-bind="post.postDate"></td>
+                                <td ng-bind="post.author"></td>
+                                <td class="col-md-1">
+                                    <a ng-href="admin/posts/{{post.simpleTitle}}" class="btn btn-primary btn-xs">
+                                        <i class="fa fa-envelope"></i> Edit Post
+                                    </a>
+                                </td>
+                                <td class="col-md-1">
+                                    <button ng-click="deletePost(post.simpleTitle)" class="btn btn-danger btn-xs">
+                                        <i class="fa fa-ban"></i> Delete Post
+                                    </button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                        <tbody ng-if="posts.length == '0'">
+                            <tr>
+                                <td colspan="5">
+                                    No posts made
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.row -->

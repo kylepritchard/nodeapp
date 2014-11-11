@@ -1,0 +1,44 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Edit Post</h1>
+        <ol class="breadcrumb">
+            <li>
+                <i class="fa fa-dashboard"></i> <a href="index.html">Dashboard</a>
+            </li>
+            <li class="active">
+                <i class="fa fa-edit"></i> Forms
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Edit Post</h3>
+            </div>
+            <div class="panel-body">
+
+                <form id="form" enctype="multipart/form-data">
+
+                    <div class="form-group">
+                        <label>Post Title</label>
+                        <input class="form-control" type="title" name="title" ng-model="post.title">
+                        <p class="help-block ">Example block-level help text here.</p>
+                    </div>
+
+                    <div class="form-group ">
+                        <label>Text area</label>
+                        <textarea class="form-control" rows="10" name="content" id="content" ng-model="post.content" redactor>
+                        </textarea>
+                    </div>
+
+                    <button ng-click="updatePost(post.simpleTitle)" class="btn btn-default ">Update Post</button>
+                    <button ng-click="deleteEditPost(post.simpleTitle)" class="btn btn-danger ">Delete Post</a>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

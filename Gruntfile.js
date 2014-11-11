@@ -18,7 +18,7 @@ module.exports = function(grunt) {
         },
         concurrent: {
             serve: {
-                tasks: ['nodemon', 'watch'],
+                tasks: ['nodemon', 'watch:stylus', 'watch:minijs'],
                 options: {
                     logConcurrentOutput: true
                 }
@@ -73,6 +73,13 @@ module.exports = function(grunt) {
                 }
             }
         },
+        uglify: {
+            bundle: {
+                files: {
+                    'public/js/bundled.min.js': ['public/js/bundle.js']
+                }
+            }
+        },
         watch: {
             stylus: {
                 files: ['**/*.styl', '**/*.css'],
@@ -81,6 +88,10 @@ module.exports = function(grunt) {
                     spawn: false,
                 },
             },
+            minijs: {
+                files: ['public/js/bundle.js'],
+                tasks: ['uglify']
+            }
         }
 
     });
@@ -93,6 +104,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-concurrent');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-uncss');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
     // Default task(s).
     grunt.registerTask('default', ['shell', 'concurrent:serve']);

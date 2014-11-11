@@ -3,7 +3,8 @@
 
     <div ng-repeat="post in posts">
         <p ng-bind="post.title"></p>
-        <p ng-bind-html="post.content | unsafe"></p>
+        <p ng-bind-html="post.content"></p>
+        <p ng-bind="post.postDate | amDateFormat:'MMMM Do YYYY'"></p>
 
         <button ng-click="deletePost(post.simpleTitle)"></button>
     </div>

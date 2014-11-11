@@ -6,6 +6,7 @@ var express = require('express'),
     exphbs = require('express-handlebars'),
     morgan = require('morgan');
 
+
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost:27017/blog');
 

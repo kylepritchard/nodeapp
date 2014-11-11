@@ -3,6 +3,7 @@
 var postmodels = require('../posts/post.model');
 var usermodels = require('../users/user.model');
 var moment = require('moment');
+var when = require('when');
 
 /*
     Save a new post to DB
@@ -16,7 +17,7 @@ exports.postPosts = function(req, res) {
     post.userId = req.user._id;
     var simpleTitle = req.body.title;
     post.simpleTitle = post.title.replace(/\s+/g, '_').toLowerCase();
-    post.postDate = moment().format('MMM Do YY');
+    post.postDate = moment();
     post.postUrl = "/posts/" + post.simpleTitle;
     post.author = req.user.displayname;
 
@@ -69,17 +70,19 @@ exports.putPost = function(req, res) {
     }, function(err, post) {
         if (err)
             res.send(err);
-
+        post.title = req.body.title;
         post.content = req.body.content;
 
         post.save(function(err) {
             if (err)
                 res.send(err);
 
-            postmodels.Post.find(function(err, posts) {
+            postmodels.Post.findOne({
+                simpleTitle: req.params.post_title
+            }, function(err, post) {
                 if (err)
                     res.send(err);
-                res.json(posts);
+                res.json(post);
             });
         });
     });
@@ -182,4 +185,23 @@ exports.getUsers = function(req, res) {
 
         res.json(users);
     });
+};
+
+exports.dashCount = function(req, res) {
+
+    usermodels.User.count(function(err, count) {
+        var usercount = count;
+
+        postmodels.Post.count(function(err, count) {
+            var postcount = count;
+
+            var counter = {
+                'usercount': usercount,
+                'postcount': postcount
+            };
+
+            res.json(counter);
+        });
+    });
+
 };

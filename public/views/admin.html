@@ -10,6 +10,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="libs/animate.css/animate.min.css">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/stylus.css">
     <!-- custom styles -->
 
@@ -24,16 +25,23 @@
 
 </head>
 
-<body ng-app="blogApp" ng-controller="HomeController">
+<body ng-app="blogApp" ng-controller="AdminController">
+    <!-- Include div for Growl Notifications -->
+    <div growl></div>
+    <div id="wrapper">
 
-    <div ng-include="'./views/partials/navigation.html'"></div>
-    <div ng-include="'./views/partials/carousel.html'"></div>
 
-    <div class="container">
+        <div ng-include="'./views/partials/admin/navigation.html'"></div>
 
-        <!-- ANGULAR DYNAMIC CONTENT -->
-        <div ng-view></div>
+        <div id="page-wrapper">
+            <div class="container-fluid">
 
+
+                <!-- ANGULAR DYNAMIC CONTENT -->
+                <div ng-view></div>
+
+            </div>
+        </div>
     </div>
 
 </body>

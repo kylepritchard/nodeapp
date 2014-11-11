@@ -1,6 +1,6 @@
 @import 'nib'
 
-// Custom navigation styling
+// CUSTOM NAVIGATION STYLING
 
 .navbar-custom
     background-color black
@@ -17,12 +17,50 @@
             a
                 color #fff
 
-// Custom Carousel styling
+// CUSTOM CAROUSEL STYLING
 
 .carousel-control
     display none
 
 .carousel-caption
     > p
-        animation-duration: 3s
-        animation-delay: 1s
+        animation-duration 3s
+        animation-delay 1s
+
+//ADMIN STYLING
+
+#page-wrapper
+    margin-top 50px
+
+//GROWL STYLING
+
+/**
+ * angular-growl - v0.4.0 - 2013-11-19
+ * https//github.com/marcorinck/angular-growl
+ * Copyright (c) 2013 Marco Rinck Licensed MIT
+*/
+
+.growl
+    position fixed
+    top 5%
+    left 50%
+    width 400px
+    height 100px
+    margin-left -200px
+    z-index 9999
+    opacity 0.95
+
+.growl-item
+    height 100px
+
+.growl-item.ng-enter,
+.growl-item.ng-leave
+    transition 5s linear all
+
+.growl-item.ng-enter,
+.growl-item.ng-leave.ng-leave-active
+    opacity 0
+
+.growl-item.ng-leave,
+.growl-item.ng-enter.ng-enter-active
+    opacity 1

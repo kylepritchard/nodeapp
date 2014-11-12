@@ -1,92 +1,56 @@
-
-/* line 286 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
-
-/* line 1 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/stylus/lib/functions/index.styl */
-
-/* line 1 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 /*
  * Start Bootstrap - SB Admin Bootstrap Admin Template (http//startbootstrap.com)
  * Code licensed under the Apache License v2.0.
  * For details, see http//www.apache.org/licenses/LICENSE-2.0.
  */
-
-/* line 7 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 /* Global Styles  */
-
-/* line 9 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 body,
 #wrapper {
   padding-left: 0;
 }
-
-/* line 15 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 #page-wrapper {
   width: 100%;
   padding: 0;
   background-color: #fff;
 }
-
-/* line 20 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 .huge {
   font-size: 50px;
   line-height: normal;
 }
-
-/* line 25 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 /* Top Navigation */
-
-/* line 27 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 .top-nav {
   padding: 0 15px;
 }
-
-/* line 30 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 .top-nav >li {
   display: inline-block;
   float: left;
 }
-
-/* line 35 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 .top-nav >li a {
   padding-top: 15px;
   padding-bottom: 15px;
   line-height: 20px;
   color: #999;
 }
-
-/* line 41 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 .top-nav >li:hover {
   color: #fff;
   background-color: #000;
 }
-
-/* line 45 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 .top-nav >li:focus {
   color: #fff;
   background-color: #000;
 }
-
-/* line 49 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
-
-/* line 51 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 .top-nav .open a {
   color: #fff;
   background-color: #000;
 }
-
-/* line 55 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 .top-nav .open:hover {
   color: #fff;
   background-color: #000;
 }
-
-/* line 59 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 .top-nav .open:focus {
   color: #fff;
   background-color: #000;
 }
-
-/* line 63 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 .top-nav .open .dropdown-menu {
   float: left;
   position: absolute;
@@ -98,59 +62,37 @@ body,
   -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
   box-shadow: 0 6px 12px rgba(0,0,0,0.175);
 }
-
-/* line 75 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 .top-nav .open .dropdown-menu >li >a {
   white-space: normal;
 }
-
-/* line 79 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 ul.message-dropdown {
   padding: 0;
   max-height: 250px;
   overflow-x: hidden;
   overflow-y: auto;
 }
-
-/* line 86 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 li.message-preview {
   width: 275px;
   border-bottom: 1px solid rgba(0,0,0,0.15);
 }
-
-/* line 90 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 li.message-preview a {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-
-/* line 95 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 li.message-footer {
   margin: 5px 0;
 }
-
-/* line 99 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 ul.alert-dropdown {
   width: 200px;
 }
-
-/* line 103 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 /* Side Navigation */
-
-/* line 105 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 @media (min-width: 768px) {
-
-/* line 107 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
   #wrapper {
     padding-left: 225px;
   }
-
-/* line 110 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
   #page-wrapper {
     padding: 10px;
   }
-
-/* line 113 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
   .side-nav {
     position: fixed;
     top: 51px;
@@ -163,256 +105,100 @@ ul.alert-dropdown {
     overflow-y: auto;
     background-color: #222;
   }
-
-/* line 125 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
-
-/* line 126 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
   .side-nav li a {
     width: 225px;
   }
-
-/* line 129 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
   .side-nav li a:hover {
     outline: none;
     background-color: #000 !important;
   }
-
-/* line 133 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
   .side-nav li a:focus {
     outline: none;
     background-color: #000 !important;
   }
-
-/* line 139 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
   .side-nav li ul {
     padding: 0;
   }
-
-/* line 143 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
-
-/* line 144 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
   .side-nav li ul li a {
     display: block;
     padding: 10px 15px 10px 38px;
     text-decoration: none;
     color: #999;
   }
-
-/* line 150 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
   .side-nav li ul li a:hover {
     color: #fff;
   }
 }
-
-/* line 154 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 /* Flot Chart Containers */
-
-/* line 156 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 .flot-chart {
   display: block;
   height: 400px;
 }
-
-/* line 161 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 .flot-chart-content {
   width: 100%;
   height: 100%;
 }
-
-/* line 166 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 /* Custom Colored Panels */
-
-/* line 168 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 .huge {
   font-size: 40px;
 }
-
-/* line 171 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 .panel-green {
   border-color: #5cb85c;
 }
-
-/* line 175 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 .panel-green .panel-heading {
   border-color: #5cb85c;
   color: #fff;
   background-color: #5cb85c;
 }
-
-/* line 180 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 .panel-green a {
   color: #5cb85c;
 }
-
-/* line 183 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 .panel-green a:hover {
   color: #3d8b3d;
 }
-
-/* line 187 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 .panel-red {
   border-color: #d9534f;
 }
-
-/* line 191 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 .panel-red .panel-heading {
   border-color: #d9534f;
   color: #fff;
   background-color: #d9534f;
 }
-
-/* line 197 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 .panel-red a {
   color: #d9534f;
 }
-
-/* line 200 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 .panel-red a:hover {
   color: #b52b27;
 }
-
-/* line 204 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 .panel-yellow {
   border-color: #f0ad4e;
 }
-
-/* line 208 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 .panel-yellow .panel-heading {
   border-color: #f0ad4e;
   color: #fff;
   background-color: #f0ad4e;
 }
-
-/* line 213 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 .panel-yellow a {
   color: #f0ad4e;
 }
-
-/* line 216 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/admin.styl */
 .panel-yellow a:hover {
   color: #df8a13;
 }
 
-
-/* line 286 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/style.styl */
-
-/* line 1 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/stylus/lib/functions/index.styl */
-
-/* line 13 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/stylus/lib/functions/index.styl */
-
-/* line 66 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/index.styl */
-
-/* line 10 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/index.styl */
-
-/* line 1 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/border.styl */
-
-/* line 28 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/border.styl */
-
-/* line 1 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/clearfix.styl */
-
-/* line 4 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/clearfix.styl */
-
-/* line 1 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/color-image.styl */
-
-/* line 196 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/color-image.styl */
-
-/* line 1 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/flex.styl */
-
-/* line 90 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/flex.styl */
-
-/* line 66 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/gradients.styl */
-
-/* line 11 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/gradients.styl */
-
-/* line 1 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/config.styl */
-
-/* line 7 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/config.styl */
-
-/* line 1 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/iconic.styl */
-
-/* line 25 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/iconic.styl */
-
-/* line 1 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/image.styl */
-
-/* line 20 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/image.styl */
-
-/* line 1 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/overflow.styl */
-
-/* line 66 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/overflow.styl */
-
-/* line 3 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/positions.styl */
-
-/* line 78 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/positions.styl */
-
-/* line 3 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/reset.styl */
-
-/* line 5 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/reset.styl */
-
-/* line 66 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/text/index.styl */
-
-/* line 12 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/text/index.styl */
-
-/* line 1 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/text/aliases.styl */
-
-/* line 9 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/text/aliases.styl */
-
-/* line 1 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/text/ellipsis.styl */
-
-/* line 8 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/text/ellipsis.styl */
-
-/* line 1 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/text/hide-text.styl */
-
-/* line 9 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/text/hide-text.styl */
-
-/* line 1 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/text/replace-text.styl */
-
-/* line 2 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/text/replace-text.styl */
-
-/* line 1 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/text/shadow-stroke.styl */
-
-/* line 577 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/text/shadow-stroke.styl */
-
-/* line 541 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/vendor.styl */
-
-/* line 11 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/vendor.styl */
-
-/* line 1 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/config.styl */
-
-/* line 28 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/config.styl */
-
-/* line 1 : /Users/kylepritchard/Desktop/nodeapp/blog angular/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/size.styl */
-
-/* line 5 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/style.styl */
 .navbar-custom {
   background-color: #000;
   border-bottom: none;
   margin-bottom: 0;
 }
-
-/* line 10 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/style.styl */
-
-/* line 12 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/style.styl */
 .navbar-custom .navbar-header a {
   color: #fff;
 }
-
-/* line 15 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/style.styl */
-
-/* line 16 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/style.styl */
-
-/* line 17 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/style.styl */
 .navbar-custom ul.nav li a {
   color: #fff;
 }
-
-/* line 22 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/style.styl */
 .carousel-control {
   display: none;
 }
-
-/* line 25 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/style.styl */
-
-/* line 26 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/style.styl */
 .carousel-caption > p {
   -webkit-animation-duration: 3s;
   -moz-animation-duration: 3s;
@@ -425,20 +211,14 @@ ul.alert-dropdown {
   -ms-animation-delay: 1s;
   animation-delay: 1s;
 }
-
-/* line 32 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/style.styl */
 #page-wrapper {
   margin-top: 50px;
 }
-
-/* line 37 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/style.styl */
 /**
  * angular-growl - v0.4.0 - 2013-11-19
  * https//github.com/marcorinck/angular-growl
  * Copyright (c) 2013 Marco Rinck Licensed MIT
 */
-
-/* line 43 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/style.styl */
 .growl {
   position: fixed;
   top: 5%;
@@ -451,13 +231,9 @@ ul.alert-dropdown {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
   filter: alpha(opacity=95);
 }
-
-/* line 53 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/style.styl */
 .growl-item {
   height: 100px;
 }
-
-/* line 56 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/style.styl */
 .growl-item.ng-enter,
 .growl-item.ng-leave {
   -webkit-transition: 5s linear all;
@@ -466,16 +242,12 @@ ul.alert-dropdown {
   -ms-transition: 5s linear all;
   transition: 5s linear all;
 }
-
-/* line 60 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/style.styl */
 .growl-item.ng-enter,
 .growl-item.ng-leave.ng-leave-active {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
 }
-
-/* line 64 : /Users/kylepritchard/Desktop/nodeapp/blog angular/src/css/style.styl */
 .growl-item.ng-leave,
 .growl-item.ng-enter.ng-enter-active {
   opacity: 1;

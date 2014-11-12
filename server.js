@@ -4,10 +4,11 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     passport = require('passport'),
     exphbs = require('express-handlebars'),
-    morgan = require('morgan');
+    morgan = require('morgan'),
+    compression = require('compression');
 
 
-// Connect to MongoDB
+// Connect to MongoDB 1
 mongoose.connect('mongodb://localhost:27017/blog');
 
 // Create Express Application
@@ -37,6 +38,11 @@ app.use(passport.initialize());
 // Setup cors for cross domain posting
 var cors = require('./server/cors');
 app.use(cors);
+
+//Use compressio
+app.use(compression({
+    threshold: 1000
+}));
 
 // Set directory for views
 app.set('views', __dirname + '/views');

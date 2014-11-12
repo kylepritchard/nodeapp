@@ -1,6 +1,8 @@
 'use strict';
 // Get Angular
 require('angular');
+window.moment = require('moment');
+
 
 // Get extra dependencies
 require('../libs/angular-growl/angular-growl.min.js');
@@ -9,8 +11,8 @@ require('../libs/angular-sanitize/angular-sanitize.min.js');
 require('../libs/angular-redactor/angular-redactor.js');
 require('../libs/angular-bootstrap/ui-bootstrap.min.js');
 require('../libs/angular-bootstrap/ui-bootstrap-tpls.js');
-require('../libs/moment/min/moment.min.js');
-require('../libs/angular-moment/angular-moment.js');
+
+require('angular-moment');
 
 // Get Controllers
 require('./controllers/Admin');

@@ -1,158 +1,98 @@
-/* line 286 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-/* line 1 : /Users/kylepritchard/Desktop/nodeapp/blog/node_modules/grunt-contrib-stylus/node_modules/stylus/lib/functions/index.styl */
-/* line 1 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
 /*
  * Start Bootstrap - SB Admin Bootstrap Admin Template (http//startbootstrap.com)
  * Code licensed under the Apache License v2.0.
  * For details, see http//www.apache.org/licenses/LICENSE-2.0.
  */
-/* line 7 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
 /* Global Styles  */
-/* line 9 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
-body {
-  margin-top: 100px;
-}
-/* line 12 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
+body,
 #wrapper {
   padding-left: 0;
 }
-/* line 16 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
 #page-wrapper {
   width: 100%;
   padding: 0;
   background-color: #fff;
 }
-/* line 22 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
 .huge {
   font-size: 50px;
   line-height: normal;
 }
-/* line 27 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
 /* Top Navigation */
-/* line 29 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
 .top-nav {
   padding: 0 15px;
 }
-/* line 32 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
 .top-nav >li {
   display: inline-block;
   float: left;
 }
-/* line 37 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
 .top-nav >li a {
   padding-top: 15px;
   padding-bottom: 15px;
   line-height: 20px;
   color: #999;
 }
-/* line 43 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
 .top-nav >li:hover {
   color: #fff;
   background-color: #000;
 }
-/* line 47 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
 .top-nav >li:focus {
   color: #fff;
   background-color: #000;
 }
-/* line 51 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-/* line 53 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
 .top-nav .open a {
   color: #fff;
   background-color: #000;
 }
-/* line 57 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
 .top-nav .open:hover {
   color: #fff;
   background-color: #000;
 }
-/* line 61 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
 .top-nav .open:focus {
   color: #fff;
   background-color: #000;
 }
-/* line 65 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
 .top-nav .open .dropdown-menu {
   float: left;
   position: absolute;
   margin-top: 0;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0,0,0,0.15);
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   background-color: #fff;
-  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.175);
 }
-/* line 77 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
 .top-nav .open .dropdown-menu >li >a {
   white-space: normal;
 }
-/* line 81 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
 ul.message-dropdown {
   padding: 0;
   max-height: 250px;
   overflow-x: hidden;
   overflow-y: auto;
 }
-/* line 88 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
 li.message-preview {
   width: 275px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(0,0,0,0.15);
 }
-/* line 92 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
 li.message-preview a {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-/* line 97 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
 li.message-footer {
   margin: 5px 0;
 }
-/* line 101 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
 ul.alert-dropdown {
   width: 200px;
 }
-/* line 105 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
 /* Side Navigation */
-/* line 107 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
 @media (min-width: 768px) {
-  /* line 109 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-  
-  body {
-    margin-top: 50px;
-  }
-  /* line 112 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-  
   #wrapper {
     padding-left: 225px;
   }
-  /* line 115 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-  
   #page-wrapper {
     padding: 10px;
   }
-  /* line 118 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-  
   .side-nav {
     position: fixed;
     top: 51px;
@@ -165,129 +105,152 @@ ul.alert-dropdown {
     overflow-y: auto;
     background-color: #222;
   }
-  /* line 130 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-  /* line 131 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-  
   .side-nav li a {
     width: 225px;
   }
-  /* line 134 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-  
   .side-nav li a:hover {
     outline: none;
     background-color: #000 !important;
   }
-  /* line 138 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-  
   .side-nav li a:focus {
     outline: none;
     background-color: #000 !important;
   }
-  /* line 144 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-  
   .side-nav li ul {
     padding: 0;
   }
-  /* line 148 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-  /* line 149 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-  
   .side-nav li ul li a {
     display: block;
     padding: 10px 15px 10px 38px;
     text-decoration: none;
     color: #999;
   }
-  /* line 155 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-  
   .side-nav li ul li a:hover {
     color: #fff;
   }
 }
-/* line 159 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
 /* Flot Chart Containers */
-/* line 161 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
 .flot-chart {
   display: block;
   height: 400px;
 }
-/* line 166 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
 .flot-chart-content {
   width: 100%;
   height: 100%;
 }
-/* line 171 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
 /* Custom Colored Panels */
-/* line 173 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
 .huge {
   font-size: 40px;
 }
-/* line 176 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
 .panel-green {
   border-color: #5cb85c;
 }
-/* line 180 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
 .panel-green .panel-heading {
   border-color: #5cb85c;
   color: #fff;
   background-color: #5cb85c;
 }
-/* line 185 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
 .panel-green a {
   color: #5cb85c;
 }
-/* line 188 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
 .panel-green a:hover {
   color: #3d8b3d;
 }
-/* line 192 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
 .panel-red {
   border-color: #d9534f;
 }
-/* line 196 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
 .panel-red .panel-heading {
   border-color: #d9534f;
   color: #fff;
   background-color: #d9534f;
 }
-/* line 202 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
 .panel-red a {
   color: #d9534f;
 }
-/* line 205 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
 .panel-red a:hover {
   color: #b52b27;
 }
-/* line 209 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
 .panel-yellow {
   border-color: #f0ad4e;
 }
-/* line 213 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
 .panel-yellow .panel-heading {
   border-color: #f0ad4e;
   color: #fff;
   background-color: #f0ad4e;
 }
-/* line 218 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
 .panel-yellow a {
   color: #f0ad4e;
 }
-/* line 221 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/admin.styl */
-
 .panel-yellow a:hover {
   color: #df8a13;
 }
-/* line 286 : /Users/kylepritchard/Desktop/nodeapp/blog/src/css/carousel.styl
+
+.navbar-custom {
+  background-color: #000;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.navbar-custom .navbar-header a {
+  color: #fff;
+}
+.navbar-custom ul.nav li a {
+  color: #fff;
+}
+.carousel-control {
+  display: none;
+}
+.carousel-caption > p {
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  -o-animation-duration: 3s;
+  -ms-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  -ms-animation-delay: 1s;
+  animation-delay: 1s;
+}
+#page-wrapper {
+  margin-top: 50px;
+}
+/**
+ * angular-growl - v0.4.0 - 2013-11-19
+ * https//github.com/marcorinck/angular-growl
+ * Copyright (c) 2013 Marco Rinck Licensed MIT
+*/
+.growl {
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  width: 400px;
+  height: 100px;
+  margin-left: -200px;
+  z-index: 9999;
+  opacity: 0.95;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
+  filter: alpha(opacity=95);
+}
+.growl-item {
+  height: 100px;
+}
+.growl-item.ng-enter,
+.growl-item.ng-leave {
+  -webkit-transition: 5s linear all;
+  -moz-transition: 5s linear all;
+  -o-transition: 5s linear all;
+  -ms-transition: 5s linear all;
+  transition: 5s linear all;
+}
+.growl-item.ng-enter,
+.growl-item.ng-leave.ng-leave-active {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+.growl-item.ng-leave,
+.growl-item.ng-enter.ng-enter-active {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}

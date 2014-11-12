@@ -38,7 +38,7 @@
                                 <td>
                                     <a href="#" ng-bind="post.title"></a>
                                 </td>
-                                <td ng-bind="post.postDate"></td>
+                                <td ng-bind="post.postDate | amDateFormat:'MMMM Do YYYY'"></td>
                                 <td ng-bind="post.author"></td>
                                 <td class="col-md-1">
                                     <a ng-href="admin/posts/{{post.simpleTitle}}" class="btn btn-primary btn-xs">

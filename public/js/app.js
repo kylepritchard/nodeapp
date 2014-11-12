@@ -12,7 +12,7 @@ var app = angular.module('blogApp', [
     'angularMoment'
 ]);
 
-// Add filters
+// Add filters to app
 
 // Filter to allow rendering of html including 'unsafe' elements ie style
 // <p ng-bind-html="post.content | unsafe"></p>

@@ -18,7 +18,7 @@ module.exports = function(grunt) {
         },
         concurrent: {
             serve: {
-                tasks: ['nodemon', 'watch:stylus', 'watch:minijs'],
+                tasks: ['nodemon', 'watch'],
                 options: {
                     logConcurrentOutput: true
                 }
@@ -29,20 +29,19 @@ module.exports = function(grunt) {
                 script: 'server.js',
                 options: {
                     args: ['--exitcrash'],
-                    ignore: ['node_modules', 'public/uploads', 'data'],
-                    ext: 'js,handlebars'
-
+                    ignore: ['node_modules', 'public/uploads', 'data', 'src', 'views'],
+                    watch: ['routes', 'server', 'public/js'],
+                    ext: 'js'
                 }
             }
         },
         stylus: {
             compile: {
                 options: {
-                    linenos: true,
                     compress: false
                 },
                 files: {
-                    'public/css/stylus.css': 'src/css/*.styl'
+                    'src/css/build/stylus.css': 'src/css/*.styl'
                 }
             }
         },
@@ -80,17 +79,24 @@ module.exports = function(grunt) {
                 }
             }
         },
+        browserify: {
+            js: {
+                src: 'public/js/browserify.js',
+                dest: 'public/js/bundle.js',
+                tasks: ['uglify']
+            }
+        },
         watch: {
             stylus: {
                 files: ['**/*.styl', '**/*.css'],
                 tasks: ['stylus', 'concat_css'],
                 options: {
                     spawn: false,
-                },
+                }
             },
-            minijs: {
-                files: ['public/js/bundle.js'],
-                tasks: ['uglify']
+            browserify: {
+                files: ['public/js/browserify.js'],
+                tasks: ['browserify']
             }
         }
 
@@ -105,6 +111,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-uncss');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-browserify');
 
     // Default task(s).
     grunt.registerTask('default', ['shell', 'concurrent:serve']);

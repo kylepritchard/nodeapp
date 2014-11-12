@@ -5,6 +5,7 @@
         <p ng-bind="post.title"></p>
         <p ng-bind-html="post.content"></p>
         <p ng-bind="post.postDate | amDateFormat:'MMMM Do YYYY'"></p>
+        <p ng-bind="post.postDate"></p>
 
         <button ng-click="deletePost(post.simpleTitle)"></button>
     </div>
